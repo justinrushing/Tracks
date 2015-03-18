@@ -8,31 +8,31 @@
 
 import Foundation
 
-enum State {
-    case Open
-    case InProgress
-    case Review
-    case Prepare
-    case Integrate
-    case Verify
-    case Closed
-}
-
-enum Priority {
-    case Low
-    case Medium
-    case High
-}
-
-enum Resolution {
-    case NotFixed
-    case Fixed
-    case WillNotFix
-    case CannotReproduce
-    case Duplicate(Track) // The track that this is a duplicate of
-}
-
 class Track {
+    enum State {
+        case Open
+        case InProgress
+        case Review
+        case Prepare
+        case Integrate
+        case Verify
+        case Closed
+    }
+    
+    enum Priority {
+        case Low
+        case Medium
+        case High
+    }
+    
+    enum Resolution {
+        case NotFixed
+        case Fixed
+        case WillNotFix
+        case CannotReproduce
+        case Duplicate(Track) // The track that this is a duplicate of
+    }
+    
     // MARK: lets
     let originator: User
     let creationDate: NSDate
